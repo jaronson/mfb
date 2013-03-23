@@ -1,0 +1,178 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+html, body {
+  font-family: Helvetica, Arial, sans-serif;
+  font: Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+}
+
+div#container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+div#header {
+  text-align: center;
+}
+
+div#banner {
+  margin: 0 auto;
+  width: 860px;
+  height: 240px;
+  background: url(/assets/montessori-from-birth.png) no-repeat center;
+  text-indent: -10000px;
+}
+
+div#header img {
+  margin-bottom: 30px;
+}
+
+div#nav-top {
+  padding: 20px 0;
+}
+
+div#nav-top ul li {
+  display: block;
+  float: left;
+  width: 200px;
+}
+
+div#nav-top a {
+  text-transform: uppercase;
+  font-family: "Avant Garde+"
+}
+
+div#left {
+  width: 180px;
+  float: left;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+div#center {
+  width: 570px;
+  float: left;
+  line-height: 1.5em;
+  text-align: justify;
+  margin: 0 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+div#right {
+  width: 200px;
+  float: left;
+  border-top: 1px solid #ccc;
+  padding: 10px 5px;
+}
+
+div#left, div#right, 
+div#left a, div#right a {
+  color: #666;
+  font-family: "Avant Garde+"
+}
+
+div#left section, div#right section {
+  margin: 10px 0;
+}
+
+div#right img {
+  margin-right: 15px;
+}
+
+.blog_post {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+.inner h1{
+  font-weight: bold;
+  font-size: 22px;
+  margin: 10px 0;
+  font-family: "Avant Garde+"
+}
+
+.blog_post .inner .clearfix {
+  margin: 10px 0;
+}
+
+.inner .clearfix p {
+  margin: 10px 0;
+}
+
+.inner footer, .inner footer a {
+}
+
+.inner .details{
+  display: block;
+  float: left;
+}
+.inner .comment_count {
+  display: block;
+  float: right;
+}
+
+.inner #comments h2{
+  margin: 10px 0;
+}
+
+form#new_comment .field {
+  clear: both;
+}
+
+form#new_comment {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+form#new_comment .field label {
+  display: block;
+  float: left;
+  width: 100px;
+}
+
+form .field input[type=text],
+form .field input[type=email] {
+  border: 1px solid #777;
+  padding: 3px;
+}
+
+form#new_comment .field input[type=text],
+form#new_comment .field input[type=email],
+form#new_comment .field textarea{
+  display: block;
+  float: left;
+}
+
+form#new_comment .field input[type=submit] {
+  margin-left: 100px;
+}
+
+div#footer{
+  margin: 20px 0 50px 0;
+}
+
+div.clear {
+  clear: both;
+}
