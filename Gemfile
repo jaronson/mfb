@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'rvm'
 gem 'rails', '3.2.12'
+gem 'unicorn'
 gem 'mysql2'
+gem 'multi_json', '1.6.1'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -12,7 +15,7 @@ end
 gem 'jquery-rails', '~> 2.0.0'
 
 # Refinery CMS
-gem 'refinerycms', '~> 2.0.0', :git => 'git://github.com/refinery/refinerycms.git', :branch => '2-0-stable'
+gem 'refinerycms', :git => 'git://github.com/resolve/refinerycms.git', :branch => '2-0-stable'
 
 group :development, :test do
   gem 'rspec'
