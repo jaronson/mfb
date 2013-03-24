@@ -58,7 +58,7 @@ div#nav-top ul li {
 
 div#nav-top a {
   text-transform: uppercase;
-  font-family: "Avant Garde+"
+  font-weight: normal;
 }
 
 div#left {
@@ -89,7 +89,6 @@ div#right {
 div#left, div#right, 
 div#left a, div#right a {
   color: #666;
-  font-family: "Avant Garde+"
 }
 
 div#left section, div#right section {
@@ -107,10 +106,9 @@ div#right img {
 }
 
 .inner h1{
-  font-weight: bold;
   font-size: 22px;
   margin: 10px 0;
-  font-family: "Avant Garde+"
+  font-weight: bold;
 }
 
 .blog_post .inner .clearfix {

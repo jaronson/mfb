@@ -15,7 +15,18 @@
 
   <%= stylesheet_link_tag 'reset' %>
   <%= stylesheet_link_tag 'application' %>
+
   <script src="/assets/modernizr-min.js" type="text/javascript"></script>
+
+  <%= javascript_include_tag 'cufon-yui' %>
+  <%= javascript_include_tag 'avantgarde.font.js' %>
+
+  <script type="text/javascript">
+    Cufon.replace('h1', { fontFamily: 'AvantGardeBold' });
+    Cufon.replace('#nav-top a', { fontFamily: 'AvantGardeBook', hover: true});
+    Cufon.replace('#left', { fontFamily: 'AvantGardeBook' });
+    Cufon.replace('#right label', { fontFamily: 'AvantGardeBold' });
+  </script>
 </head>
 <body>
   <div id="container">
