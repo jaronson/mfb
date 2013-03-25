@@ -1,8 +1,11 @@
 <section>
 <form action="#" id="search_form" method="get">
   <div class="field">
-    <label for="query">Search:</label>
-    <input type="text" name="query">
+    <form action="<%= refinery.search_path %>" method="get">
+      <label for="query">Search:</label>
+      <input type="text" name="query">
+      <input type="submit" value="Submit"/>
+    </form>
   </div>
 </form>
 </section>

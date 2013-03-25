@@ -7,7 +7,7 @@
       <%= will_paginate @posts %>
     </section>
   <% else %>
-    <p><%= t('.no_blog_articles_yet') %></p>
+    <p><%= t('blog.posts.no_posts', :query => params[:query]) %></p>
   <% end %>
 <% end %>
 

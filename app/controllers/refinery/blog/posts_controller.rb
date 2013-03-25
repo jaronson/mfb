@@ -11,6 +11,10 @@ module Refinery
       respond_to :html, :js, :rss
 
       def index
+        if params[:query].present?
+          return search
+        end
+
         # Rss feeders are greedy. Let's give them every blog post instead of paginating.
         (@posts = Post.live.includes(:comments, :categories).all) if request.format.rss?
         respond_with (@posts) do |format|
@@ -29,6 +33,18 @@ module Refinery
         respond_with (@post) do |format|
           format.html { present(@post) }
           format.js { render :partial => 'post', :layout => false }
+        end
+      end
+
+      def search
+        if params[:query].present?
+          @posts = Post.search(params[:query])
+          respond_with(@posts) do |format|
+            format.html
+            format.rss
+          end
+        else
+          redirect_to refinery.blog_posts
         end
       end
 
