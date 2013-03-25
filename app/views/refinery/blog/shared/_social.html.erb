@@ -1,5 +1,5 @@
-<%= link_to(image_tag('facebook.png'), '#') %>
-<%= link_to(image_tag('pinterest.png'), '#') %>
-<%= link_to(image_tag('twitter.png'), '#') %>
-<%= link_to image_tag('rss.png'), refinery.blog_rss_feed_path, :id => "rss_feed_subscribe"%>
+<%= link_to(image_tag('facebook.png'), '#', :class => 'social') %>
+<%= link_to(image_tag('pinterest.png'), '#', :class => 'social') %>
+<%= link_to(image_tag('twitter.png'), '#', :class => 'social') %>
+<%= link_to image_tag('rss.png'), refinery.blog_rss_feed_path, :id => "rss_feed_subscribe", :class => 'social'%>
 <% content_for :meta, auto_discovery_link_tag(:atom, refinery.blog_rss_feed_url, :title => 'RSS Feed') -%>

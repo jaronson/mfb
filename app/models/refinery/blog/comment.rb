@@ -2,7 +2,7 @@ module Refinery
   module Blog
     class Comment < ActiveRecord::Base
 
-      attr_accessible :name, :email, :message
+      attr_accessible :name, :email, :website, :message
 
       filters_spam :author_field => :name,
                    :email_field => :email,
