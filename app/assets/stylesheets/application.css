@@ -16,6 +16,13 @@ html, body {
   font: Helvetica, Arial, sans-serif;
 }
 
+#center h1{
+  font-size: 22px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+
 a {
   color: #000;
   text-decoration: none;
@@ -104,12 +111,6 @@ div#right img {
   padding-bottom: 25px;
   margin-bottom: 25px;
   border-bottom: 1px solid #ccc;
-}
-
-.inner h1{
-  font-size: 22px;
-  margin: 10px 0;
-  font-weight: bold;
 }
 
 .blog_post .inner .clearfix {
