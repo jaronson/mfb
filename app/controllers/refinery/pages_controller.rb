@@ -35,7 +35,7 @@ module Refinery
           end
         end
       else
-        error_404
+        redirect_to not_found_path
       end
     end
 
@@ -82,7 +82,7 @@ module Refinery
                 when "show", "preview"
                   Refinery::Page.find_by_path_or_id(params[:path], params[:id])
                 end
-      @page || (error_404 if fallback_to_404)
+      @page || (redirect_to not_found_path if fallback_to_404)
     end
 
     alias_method :page, :find_page
