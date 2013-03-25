@@ -21,6 +21,7 @@ db/*.sqlite3-journal
 tmp
 tmp/**/*
 config/database.yml
+config/*.sphinx.conf
 
 # Documentation
 doc/api

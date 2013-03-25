@@ -5,6 +5,7 @@ gem 'rails', '3.2.12'
 gem 'unicorn'
 gem 'mysql2'
 gem 'multi_json', '1.6.1'
+gem 'thinking-sphinx', '2.0.10'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

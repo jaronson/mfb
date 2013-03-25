@@ -3,7 +3,6 @@
    <%= value %>
  </div>
 <% end %>
-
 <article id="blog_post">
   <header>
     <h1><%= @post.title %></h1>
@@ -11,7 +10,7 @@
       <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted_at'>
         <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :short)) %>
       </time>
-      <%= "#{t('by', :scope => 'refinery.blog.posts.show')} <strong>#{@post.author.username.titleize}</strong>".html_safe if @post.author.present? %>
+      <%= content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.username}", :class => "blog_author") if @post.author.present? %>
       <% if @post.source_url.present? %>
         <div class='blog_source'>
           <%= "#{t('source', :scope => 'refinery.blog.posts.show')}: " %>
@@ -27,18 +26,12 @@
         </aside>
       <% end %>
     </section>
-    <div class="clear"></div>
   </header>
-
-  <div class="clearfix">
-    <%= @post.body.html_safe %>
-  </div>
-
-  <div class="clear"></div>
+  <%= @post.body.html_safe %>
 
   <% if Refinery::Blog::Post::ShareThis.enabled? %>
     <span class="st_sharethis" displayText="ShareThis"></span>
   <% end %>
 </article>
-
-<%= render '/refinery/draft_page_message' unless @post.nil? or @post.live? -%>
+<%= render :partial => '/refinery/draft_page_message' unless @post.nil? or @post.live? -%>
+<%= render 'nav' if next_or_previous?(@post) %>
