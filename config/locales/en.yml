@@ -1,4 +1,9 @@
 en:
+  refinery:
+    blog:
+      posts:
+        show:
+          blog_home: Home
   blog:
     posts:
       no_posts: Your search for '%{query}' returned no results.

@@ -5,6 +5,7 @@
 <% end %>
 <article id="blog_post">
   <header>
+    <%= render 'nav' if next_or_previous?(@post) %>
     <h1><%= @post.title %></h1>
   </header>
 
