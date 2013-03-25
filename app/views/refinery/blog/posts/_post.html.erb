@@ -10,7 +10,7 @@
       <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted_at'>
         <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :short)) %>
       </time>
-      <%= content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.username}", :class => "blog_author") if @post.author.present? %>
+      <%= content_tag(:span, "#{t('by', :scope => 'refinery.blog.posts.show')} <strong>#{@post.author.username.titleize}</strong>".html_safe, :class => "blog_author") if @post.author.present? %>
       <% if @post.source_url.present? %>
         <div class='blog_source'>
           <%= "#{t('source', :scope => 'refinery.blog.posts.show')}: " %>
@@ -27,6 +27,9 @@
       <% end %>
     </section>
   </header>
+
+  <br/>
+
   <%= @post.body.html_safe %>
 
   <% if Refinery::Blog::Post::ShareThis.enabled? %>

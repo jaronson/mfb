@@ -137,6 +137,10 @@ div#right a.social {
   margin: 10px 0;
 }
 
+#blog_post header{
+  display: block;
+}
+
 form#new_comment .field {
   clear: both;
 }
