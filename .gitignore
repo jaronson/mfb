@@ -96,3 +96,6 @@ capybara-*html
 # vendor/extensions dummy applications.
 vendor/extensions/**/spec/dummy
 
+public/assets/*
+public/blog/*
+public/index.html
